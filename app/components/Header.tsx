@@ -20,16 +20,13 @@ const Header = () => {
           </li>
           <div className="flex items-center w-full justify-between">
             <li className="hover:text-[#EFC738] transition-all duration-300 ease-in-out">
-              <Link href="/the-cave">The Cave</Link>
+              <Link href="/pathway">The Cave</Link>
             </li>
             <li className="hover:text-[#EFC738] transition-all duration-300 ease-in-out">
-              <Link href="/pathway">The Path</Link>
+              <Link href="/about">The Path</Link>
             </li>
             <li className="hover:text-[#EFC738] transition-all duration-300 ease-in-out">
-              <Link href="/schools">Schools</Link>
-            </li>
-            <li className="hover:text-[#EFC738] transition-all duration-300 ease-in-out">
-              <Link href="/infrastructure">The Infrastructure</Link>
+              <Link href="/contact">Schools</Link>
             </li>
             <li className="hover:text-[#EFC738] transition-all duration-300 ease-in-out">
               <Link href="/archive">The Archive</Link>
