@@ -26,7 +26,8 @@ const Header = () => {
               <Link href="/pathway">The Path</Link>
             </li>
             <li className="hover:text-[#EFC738] transition-all duration-300 ease-in-out">
-              <Link href="/school">The School</Link>
+              <Link href="/about">Schools</Link>
+              <Link href="/the-cave">The School</Link>
             </li>
             <li className="hover:text-[#EFC738] transition-all duration-300 ease-in-out">
               <Link href="/infrastructure">The Infrastructure</Link>
