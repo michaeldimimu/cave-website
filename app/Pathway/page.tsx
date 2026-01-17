@@ -40,12 +40,17 @@ const Pathway = () => {
         ))}
       </div>
       <section className="mt-6">
-        <div className="flex flex-col gap-2 items-center">
+        <div className="flex flex-col gap-3 items-center">
           <p className="text-center">What next?</p>
-          <h2 className="font-bold text-center text-2xl">Built for growth</h2>
+          <h2 className="font-bold text-center text-3xl">Built for growth</h2>
           <p className="text-center max-w-prose leading-relaxed">
             Each stage serves a purpose in your development.
           </p>
+        </div>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="col-span-2"></div>
+          <div className="col-span-1"></div>
+          <div className="col-span-1"></div>
         </div>
       </section>
     </section>
