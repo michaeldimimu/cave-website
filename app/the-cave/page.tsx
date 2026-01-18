@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { Poppins, Inter } from "next/font/google";
+import TabsCard from "../components/TabsCard";
+import Tabs from "../components/Tabs";
+import ValueCard from "../components/ValueCard";
+import valueCards from "../data/values";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,8 +18,8 @@ const poppins = Poppins({
 
 const TheCave = () => {
   return (
-    <section className="bg-[#0A0A0A] max-w-7xl mt-20 text-white py-24 relative overflow-hidden">
-      <div className="w-full h-[80vh] relative">
+    <section className="max-w-7xl pt-20 text-white relative overflow-hidden">
+      <div className="w-full h-[90vh] relative">
         <Image
           src="/the-cave-hero.jpg"
           alt="The Cave Hero"
@@ -123,6 +127,107 @@ const TheCave = () => {
                 It rewards depth coupled with ruthless execution.
               </span>
             </p>
+          </div>
+        </div>
+        <h2
+          className={`uppercase text-3xl text-center text-[#EBCB4B] md:text-5xl font-bold ${poppins.className}`}
+        >
+          We emerge to correct
+        </h2>
+      </div>
+      <div className="bg-white text-black py-24 px-8 flex flex-col items-center justify-center text-center">
+        <div className=" opacity-40 pointer-events-none rounded-full"></div>
+
+        <div className="relative z-10 max-w-3xl space-y-6">
+          <h2
+            className={`text-4xl md:text-5xl font-bold tracking-tight ${poppins.className}`}
+          >
+            To build for serious growth
+          </h2>
+          <p className="text-gray-900 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
+            The Cave operates as a philosophical institution, not a network. It
+            demands rigor from those who enter and rewards discipline with
+            transformation.
+          </p>
+        </div>
+      </div>
+      <Tabs />
+
+      <div className="bg-black text-white py-24 px-8 mt-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
+            <h2
+              className={`text-4xl md:text-6xl font-bold tracking-tight text-[#EBCB4B] leading-[1.1] max-w-2xl ${poppins.className}`}
+            >
+              Built on first principles, not best practices.
+            </h2>
+            <p className="text-gray-300 text-sm md:text-lg max-w-md font-medium text-right md:text-right leading-relaxed">
+              Every element of The Cave derives from fundamental truths about
+              skill acquisition, knowledge transfer, and sustainable growth.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {valueCards.map(({ title, body, footer }) => (
+              <ValueCard
+                key={title}
+                title={title}
+                body={body}
+                footer={footer}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white text-black py-24 px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2
+            className={`text-5xl md:text-7xl font-bold text-[#EBCB4B] mb-20 ${poppins.className}`}
+          >
+            Meet the Master minds
+          </h2>
+
+          <div className="flex flex-col gap-8">
+            {/* Top Row - 2 Cards */}
+            <div className="flex flex-col md:flex-row justify-center gap-8">
+              {[1, 2].map((i) => (
+                <div
+                  key={i}
+                  className="border border-[#EBCB4B] rounded-lg overflow-hidden w-full md:w-[350px] aspect-square flex flex-col relative group"
+                >
+                  <div className="flex-1 bg-gray-200 flex items-center justify-center relative">
+                    <div className="text-gray-400 text-6xl">🖼️</div>
+                  </div>
+                  <div className="bg-linear-to-t from-[#EBCB4B] from-60% via-[#EBCB4B]/90 to-transparent pt-16 pb-6 px-4 absolute bottom-0 w-full">
+                    <h3 className="text-xl font-bold mb-1">Mezie the sage</h3>
+                    <p className="text-sm font-medium opacity-90">
+                      Co founded the Cave (Principal)
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom Row - 3 Cards */}
+            <div className="flex flex-col md:flex-row justify-center gap-8">
+              {[3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className="border border-[#EBCB4B] rounded-lg overflow-hidden w-full md:w-[350px] aspect-square flex flex-col relative group"
+                >
+                  <div className="flex-1 bg-gray-200 flex items-center justify-center relative">
+                    <div className="text-gray-400 text-6xl">🖼️</div>
+                  </div>
+                  <div className="bg-linear-to-t from-[#EBCB4B] from-60% via-[#EBCB4B]/90 to-transparent pt-16 pb-6 px-4 absolute bottom-0 w-full">
+                    <h3 className="text-xl font-bold mb-1">Mezie the sage</h3>
+                    <p className="text-sm font-medium opacity-90">
+                      Co founded the Cave (Principal)
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

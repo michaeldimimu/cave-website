@@ -9,11 +9,11 @@ const PathCard = ({
   subtitle,
   header,
 }: {
-  number: string;
+  number?: string;
   title: string;
   description: string;
   image: string;
-  order: number;
+  order?: number;
   subtitle: string;
   header: string;
 }) => {
