@@ -5,6 +5,8 @@ import TabsCard from "../components/TabsCard";
 import Tabs from "../components/Tabs";
 import ValueCard from "../components/ValueCard";
 import valueCards from "../data/values";
+import MastermindCard from "../components/MastermindCard";
+import masterminds from "../data/masterminds";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -135,25 +137,34 @@ const Cave = () => {
           We emerge to correct
         </h2>
       </div>
-      <div className="bg-white text-black py-24 px-8 flex flex-col items-center justify-center text-center">
+      <div className="bg-white text-black  px-8 flex flex-col items-center justify-center text-center">
         <div className=" opacity-40 pointer-events-none rounded-full"></div>
 
-        <div className="relative z-10 max-w-3xl space-y-6">
-          <h2
-            className={`text-4xl md:text-5xl font-bold tracking-tight ${poppins.className}`}
-          >
-            To build for serious growth
-          </h2>
-          <p className="text-gray-900 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
-            The Cave operates as a philosophical institution, not a network. It
-            demands rigor from those who enter and rewards discipline with
-            transformation.
-          </p>
-        </div>
+        <section className="max-w-4xl relative flex items-center justify-center">
+          <Image
+            src="/yellow-bg.png"
+            alt="Glowing yellow background"
+            width={1000}
+            height={600}
+            className="object-contain"
+          />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+            <h2
+              className={`text-3xl md:text-4xl font-bold tracking-tight mb-6 ${poppins.className}`}
+            >
+              To build for serious growth
+            </h2>
+            <p className="text-gray-900 text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-medium">
+              The Cave operates as a philosophical institution, not a network.
+              It demands rigor from those who enter and rewards discipline with
+              transformation.
+            </p>
+          </div>
+        </section>
       </div>
       <Tabs />
 
-      <div className="bg-black text-white py-24 px-8 mt-20">
+      <div className="bg-black py-24 text-white  px-8 mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
             <h2
@@ -180,7 +191,7 @@ const Cave = () => {
         </div>
       </div>
 
-      <div className="bg-white text-black py-24 px-8">
+      <div className="bg-white py-24 text-black  px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h2
             className={`text-5xl md:text-7xl font-bold text-[#EBCB4B] mb-20 ${poppins.className}`}
@@ -188,46 +199,15 @@ const Cave = () => {
             Meet the Master minds
           </h2>
 
-          <div className="flex flex-col gap-8">
-            {/* Top Row - 2 Cards */}
-            <div className="flex flex-col md:flex-row justify-center gap-8">
-              {[1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="border border-[#EBCB4B] rounded-lg overflow-hidden w-full md:w-[350px] aspect-square flex flex-col relative group"
-                >
-                  <div className="flex-1 bg-gray-200 flex items-center justify-center relative">
-                    <div className="text-gray-400 text-6xl">🖼️</div>
-                  </div>
-                  <div className="bg-linear-to-t from-[#EBCB4B] from-60% via-[#EBCB4B]/90 to-transparent pt-16 pb-6 px-4 absolute bottom-0 w-full">
-                    <h3 className="text-xl font-bold mb-1">Mezie the sage</h3>
-                    <p className="text-sm font-medium opacity-90">
-                      Co founded the Cave (Principal)
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Bottom Row - 3 Cards */}
-            <div className="flex flex-col md:flex-row justify-center gap-8">
-              {[3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="border border-[#EBCB4B] rounded-lg overflow-hidden w-full md:w-[350px] aspect-square flex flex-col relative group"
-                >
-                  <div className="flex-1 bg-gray-200 flex items-center justify-center relative">
-                    <div className="text-gray-400 text-6xl">🖼️</div>
-                  </div>
-                  <div className="bg-linear-to-t from-[#EBCB4B] from-60% via-[#EBCB4B]/90 to-transparent pt-16 pb-6 px-4 absolute bottom-0 w-full">
-                    <h3 className="text-xl font-bold mb-1">Mezie the sage</h3>
-                    <p className="text-sm font-medium opacity-90">
-                      Co founded the Cave (Principal)
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {masterminds.map((mastermind) => (
+              <MastermindCard
+                key={mastermind.name}
+                name={mastermind.name}
+                role={mastermind.role}
+                image={mastermind.image}
+              />
+            ))}
           </div>
         </div>
       </div>
