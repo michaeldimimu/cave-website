@@ -42,13 +42,8 @@ const PathCard = ({
           </button>
         </div>
 
-        <div className="flex-1 relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
-          <Image
-            src={image}
-            alt="Pathway Image"
-            fill
-            className="object-cover"
-          />
+        <div className="flex-1 relative w-full min-h-[400px] md:min-h-[450px] lg:min-h-[550px]">
+          <Image src={image} alt="Pathway Image" fill className="object-top" />
         </div>
       </div>
     </section>

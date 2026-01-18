@@ -16,12 +16,12 @@ const paths = [
     description: "Where intention meets action",
     subtitle:
       "The first stage demands clarity. You arrive with questions and leave with direction.",
-    image: "/onboarding-img.jpg",
+    image: "/path-img.jpg",
     order: 2,
   },
   {
     number: "03",
-    title: "Begin",
+    title: "Lounge",
     header: "Community",
     description: "Where intention meets action",
     subtitle:
@@ -36,7 +36,7 @@ const paths = [
     description: "Where intention meets action",
     subtitle:
       "The first stage demands clarity. You arrive with questions and leave with direction.",
-    image: "/begin-img.jpg",
+    image: "/bridge-img.jpg",
     order: 2,
   },
   {
@@ -46,7 +46,7 @@ const paths = [
     description: "Where intention meets action",
     subtitle:
       "The first stage demands clarity. You arrive with questions and leave with direction.",
-    image: "/onboarding-img.jpg",
+    image: "/lighthouse-img.jpg",
     order: 1,
   },
 ];
