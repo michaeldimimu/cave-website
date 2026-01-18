@@ -16,7 +16,7 @@ const poppins = Poppins({
   weight: ["400", "700", "900"],
 });
 
-const TheCave = () => {
+const Cave = () => {
   return (
     <section className="max-w-7xl pt-20 text-white relative overflow-hidden">
       <div className="w-full h-[90vh] relative">
@@ -235,4 +235,4 @@ const TheCave = () => {
   );
 };
 
-export default TheCave;
+export default Cave;
