@@ -2,7 +2,7 @@ const heroSlides = [
   {
     id: 1,
     name: "Leader Bill",
-    subtitle: "At TEDx UNILAG",
+    subtitle: "TedxUnilag Licensee",
     image: "/leaderbill-img.jpg",
   },
   {
@@ -14,7 +14,7 @@ const heroSlides = [
   {
     id: 3,
     name: "Olaoluwa WhiteFire",
-    subtitle: "TedxUnilag Licensee",
+    subtitle: "Host,KFC UNILAG 2.0's first Pre-event",
     image: "/whitefire-img.jpg",
   },
   {
