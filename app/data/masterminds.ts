@@ -23,7 +23,12 @@ const masterminds = [
   {
     name: "Ayomide Himothy",
     role: "COO & CTO",
-    image: "/ayomide-img.jpg",
+    image: "/ayomide-img.jpeg",
+  },
+  {
+    name: "Olaoluwa WhiteFire",
+    role: "Head of Partnerships & Distribution",
+    image: "/olaoluwa-img.png",
   },
   {
     name: "Victoria",

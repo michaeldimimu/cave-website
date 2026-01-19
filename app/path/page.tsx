@@ -1,265 +1,147 @@
-import React from "react";
+"use client";
 
-const Cave = () => {
+import Image from "next/image";
+import React, { useRef } from "react";
+import PathCard from "../components/PathCard";
+import paths from "../data/paths";
+import CTA from "../components/CTA";
+import InstagramLazyEmbed from "../components/InstagramEmbed";
+
+const Pathway = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 400;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <section style={{ marginTop: "5rem" }}>
-      <div className="bg-[#0A0A0A] text-white py-16 md:py-24 px-6 md:px-8 text-center relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#EBCB4B] opacity-10 blur-[80px] md:blur-[120px] pointer-events-none"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-7xl font-black mb-6 leading-tight uppercase tracking-tighter">
-            Discipline shapes what <br />
-            <span className="text-[#EBCB4B]">matters most</span>
+    <section className="w-full bg-white  mt-20 ">
+      <div className="bg-[linear-gradient(339.36deg,#D7C102_-25.31%,#060606_27.69%,#D7C102_107.88%)] pb-10">
+        <InstagramLazyEmbed />
+        <div className="mt-8 px-6 md:px-0 flex flex-col w-full gap-4 justify-center items-center text-white text-center">
+          <h1 className="text-3xl md:text-6xl font-black tracking-tighter leading-tight">
+            The journey begins in the depths
           </h1>
-          <p className="text-gray-400 text-base md:text-lg mb-8 md:mb-10 max-w-2xl mx-auto">
-            The Cave is a philosophy-driven community for those who refuse
-            scattered ambition. We build serious practitioners through
-            structured paths, intellectual rigor, and real outcomes.
+          <p className="text-center max-w-prose leading-relaxed">
+            The Cave is a structured path of growth and intention. Each stage
+            builds upon the last, moving you from beginning through mastery and
+            beyond.
           </p>
-          <a
-            href="https://wa.link/chewxp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="bg-[#EBCB4B] text-black font-bold py-3 md:py-4 px-8 md:px-12 rounded-sm cursor-pointer hover:opacity-80 uppercase transition-all text-sm md:text-base">
-              Begin
-            </button>
-          </a>
         </div>
+        {paths.map((path) => (
+          <PathCard key={path.number} {...path} />
+        ))}
       </div>
 
-      <div className="bg-[#8B7310] py-3 md:py-4 overflow-hidden whitespace-nowrap border-y border-black flex">
-        <div className="flex gap-8 md:gap-12 animate-scroll uppercase italic text-xs md:text-sm text-black shrink-0 p-4">
-          <span>Building wealth and influence a step at a time.</span>
-          <span>Building wealth and influence a step at a time.</span>
-          <span>Building wealth and influence a step at a time.</span>
-          <span>Building wealth and influence a step at a time.</span>
+      <section className="py-16 bg-white">
+        <div className="flex flex-col gap-3 items-center mb-12">
+          <p className="text-gray-500">What next?</p>
+          <h2 className="font-bold text-3xl">Built for growth</h2>
+          <p className="text-center max-w-prose text-gray-600">
+            Each stage serves a purpose in your development.
+          </p>
         </div>
-        <div className="flex gap-8 italic md:gap-12 animate-scroll uppercase text-xs md:text-sm text-black shrink-0 p-4">
-          <span>Building wealth and influence a step at a time.</span>
-          <span>Building wealth and influence a step at a time.</span>
-          <span>Building wealth and influence a step at a time.</span>
-          <span>Building wealth and influence a step at a time.</span>
-        </div>
-      </div>
 
-      <div className="bg-white text-black py-16 md:py-24 px-6 md:px-8 relative">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
-          <div className="flex-1 relative text-center md:text-left">
-            <h2 className="text-3xl md:text-5xl font-black leading-none mb-6 md:mb-8 tracking-tighter uppercase">
-              Capable minds without <br /> direction collapse
-            </h2>
-            <p className="text-gray-700 text-base md:text-lg mb-8 max-w-md mx-auto md:mx-0">
-              You have the capacity. You lack the structure. Ambition without
-              framework becomes noise, and potential without discipline becomes
-              regret. IF THAT'S YOU,
-            </p>
-            <a
-              href="https://wa.link/chewxp"
-              target="_blank"
-              rel="noopener noreferrer"
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+          {/* Full Carousel for Mastery, Citadel, and Tribes */}
+          <div className="md:col-span-4 relative">
+            <div
+              ref={scrollRef}
+              className="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-4 no-scrollbar scrollbar-hide"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
-              <button className="bg-[#EBCB4B] text-black font-bold py-3 px-8 rounded-sm uppercase border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] cursor-pointer hover:opacity-80 transition-all text-sm md:text-base">
-                Gain clarity
-              </button>
-            </a>
-          </div>
-          <div className="flex-1 relative w-full">
-            <img
-              src="/sticky-man.jpeg"
-              alt="Scattered-man"
-              className="w-full grayscale border border-gray-200"
-            />
-            <div className="absolute top-[-10px] left-0 md:top-[-20px] md:left-[-30px] bg-white border border-black px-3 py-1 -rotate-5 font-bold text-[10px] md:text-xs shadow-sm">
-              Scattered across many paths
-            </div>
-            <div className="absolute top-[30px] right-0 md:top-[40px] md:right-[-10px] bg-white border border-black px-3 py-1 rotate-3 font-bold text-[10px] md:text-xs shadow-sm">
-              No clear direction
-            </div>
-            <div className="absolute bottom-[20px] left-0 md:left-[-10px] bg-white border border-black px-3 py-1 -rotate-2 font-bold text-[10px] md:text-xs shadow-sm">
-              Tired of the noise
-            </div>
-          </div>
-        </div>
-      </div>
+              {/* Card 1 (Mastery) */}
+              <div className="relative h-[400px] min-w-[300px] md:min-w-full rounded-lg overflow-hidden group snap-center shrink-0">
+                <Image
+                  src="/alchemy-img.jpg"
+                  alt="Mastery"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40 p-10 flex flex-col justify-between text-white z-10">
+                  <span className="text-sm font-semibold uppercase">
+                    Mastery
+                  </span>
+                  <h3 className="text-3xl md:text-4xl font-bold max-w-sm">
+                    Digital Alchemy sharpens your skills
+                  </h3>
+                  <p className="text-sm max-w-md">
+                    Advanced training meets practical application in real time
+                  </p>
+                </div>
+              </div>
 
-      <div className="bg-[#0A0A0A] text-white py-20 md:py-32 px-6 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 md:mb-24">
-            <h2 className="text-3xl md:text-6xl font-black mb-4 tracking-tighter">
-              Go from confused to <br />
-              <span className="text-[#EBCB4B] drop-shadow-[0_0_15px_rgba(235,203,75,0.5)]">
-                master builder
-              </span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">
-              The path is deliberate. Each stage builds on the last. You move
-              through chambers of increasing depth, earning clarity and
-              capability with every step.
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row gap-12 md:gap-32 items-start">
-            <div className="w-full md:w-1/3 relative pl-8 border-l-2 border-gray-800 space-y-16 md:space-y-24 py-4 ml-2 md:ml-0">
-              <div className="relative">
-                <div className="absolute -left-[41px] top-1 w-5 h-5 bg-[#EBCB4B] rounded-full shadow-[0_0_10px_#EBCB4B]"></div>
-                <h3 className="text-xl md:text-2xl font-bold text-white leading-none">
-                  Begin
-                </h3>
+              {/* Card 2 (Citadel) */}
+              <div className="relative h-[400px] min-w-[300px] md:min-w-full rounded-lg overflow-hidden group snap-center shrink-0">
+                <Image
+                  src="/citadel-img.jpg"
+                  alt="Citadel"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40 p-8 flex flex-col justify-center gap-4 text-white z-10 text-center">
+                  <h3 className="text-2xl font-bold">
+                    Citadel stands as your final destination
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    You emerge as a guide for others seeking the path
+                  </p>
+                </div>
               </div>
-              <div className="relative">
-                <div className="absolute -left-[41px] top-1 w-5 h-5 bg-gray-600 rounded-full border-4 border-[#0A0A0A]"></div>
-                <h3 className="text-xl md:text-2xl font-bold text-gray-500 leading-none">
-                  Onboarding
-                </h3>
-              </div>
-              <div className="relative">
-                <div className="absolute -left-[41px] top-1 w-5 h-5 bg-gray-600 rounded-full border-4 border-[#0A0A0A]"></div>
-                <h3 className="text-xl md:text-2xl font-bold text-gray-500 leading-none">
-                  The Lounge
-                </h3>
-              </div>
-              <div className="relative">
-                <div className="absolute -left-[41px] top-1 w-5 h-5 bg-gray-600 rounded-full border-4 border-[#0A0A0A]"></div>
-                <h3 className="text-xl md:text-2xl font-bold text-gray-500 leading-none">
-                  The Bridge
-                </h3>
+
+              {/* Card 3 (Tribes) */}
+              <div className="relative h-[400px] min-w-[300px] md:min-w-full rounded-lg overflow-hidden group snap-center shrink-0">
+                <Image
+                  src="/tribe-img.jpg"
+                  alt="Tribes"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40 p-8 flex flex-col justify-center gap-4 text-white z-10 text-center">
+                  <h3 className="text-2xl font-bold">
+                    Tribes unite those who share the same calling
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    Identity forms through shared values and vision
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="w-full md:w-2/3 flex flex-col items-center text-center">
-              <img
-                src="/sticky-man.jpeg"
-                alt="Mastery Path"
-                className="max-w-md w-full rounded-sm grayscale opacity-80 mb-8"
-              />
-
-              <a
-                href="https://wa.link/chewxp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full md:w-auto"
+            {/* Navigation arrows */}
+            <div className="flex justify-center md:justify-end gap-3 mt-4">
+              <button
+                onClick={() => scroll("left")}
+                className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#EBCB4B] hover:border-[#EBCB4B] hover:text-black transition-all cursor-pointer"
+                aria-label="Previous"
               >
-                <button className="bg-[#EBCB4B] text-black font-bold py-4 px-12 w-full md:w-auto rounded-sm uppercase cursor-pointer hover:opacity-80 transition-all">
-                  Begin
-                </button>
-              </a>
+                ←
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#EBCB4B] hover:border-[#EBCB4B] hover:text-black transition-all cursor-pointer"
+                aria-label="Next"
+              >
+                →
+              </button>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-white text-black py-20 md:py-32 px-6 md:px-8 text-center">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-black mb-12 md:mb-16 tracking-tighter">
-            Three disciplines for serious practitioners
-          </h2>
-          <p className="text-center text-gray-600 mt-4 mb-12 md:mb-16 max-w-2xl mx-auto">
-            Each school teaches what matters. Each demands rigor. Each builds
-            capacity that compounds over time.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
-            <div className="border border-gray-200 p-8 md:p-10 rounded-lg hover:shadow-lg transition-shadow text-center">
-              <div className="text-4xl mb-6">🏷️</div>
-              <h3 className="text-2xl font-bold mb-4">Selling school</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Master the art of moving ideas and building sustainable
-                influence.
-              </p>
-            </div>
-            <div className="border border-gray-200 p-8 md:p-10 rounded-lg hover:shadow-lg transition-shadow text-center">
-              <div className="text-4xl mb-6">🛠️</div>
-              <h3 className="text-2xl font-bold mb-4">Healing school</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Learn to restore what has been broken and find clarity.
-              </p>
-            </div>
-            <div className="border border-gray-200 p-8 md:p-10 rounded-lg hover:shadow-lg transition-shadow text-center">
-              <div className="text-4xl mb-6">⚙️</div>
-              <h3 className="text-2xl font-bold mb-4">Impact school</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Create systems that matter and leave something real behind.
-              </p>
-            </div>
-          </div>
-          <a
-            href="https://wa.link/chewxp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="bg-[#EBCB4B] text-black font-bold py-3 px-12 rounded-sm uppercase cursor-pointer hover:opacity-80 transition-all">
-              Explore
-            </button>
-          </a>
-        </div>
-      </div>
-
-      <div className="bg-[#0A0A0A] text-white py-20 md:py-32 px-6 md:px-8 text-center border-t border-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter">
-            700+ members. 5+ countries. <br /> One standard.
-          </h2>
-          <p className="text-gray-400 mb-12 md:mb-16 text-base md:text-lg">
-            What happens when serious people commit to serious work
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-[#1A1A1A] rounded-xl p-8 flex flex-col justify-between text-center min-h-[300px]">
-              <p className="text-gray-200 text-lg leading-relaxed font-medium">
-                "I loved selling, but I struggled to do it confidently. The Cave
-                helped me level up fast — my life and business went from 0 to
-                100."
-              </p>
-              <div>
-                <div className="w-full h-px bg-white/10 my-6"></div>
-                <h4 className="font-bold text-white mb-1">Coach Uwa</h4>
-                <p className="text-sm text-gray-500">Financial Coach</p>
-              </div>
-            </div>
-
-            <div className="bg-[#1A1A1A] rounded-xl p-8 flex flex-col justify-between text-center min-h-[300px] border border-[#EBCB4B] shadow-[0_0_30px_rgba(235,203,75,0.15)] relative">
-              <p className="text-gray-200 text-lg leading-relaxed font-medium text-balance">
-                "The Cave helped me identify the gaps in my financial discipline
-                and the clarity I was missing. I'm grateful for the shift."
-              </p>
-              <div>
-                <div className="w-full h-px bg-white/10 my-6"></div>
-                <h4 className="font-bold text-white mb-1">Richard</h4>
-                <p className="text-sm text-gray-500">Business Owner</p>
-              </div>
-            </div>
-
-            <div className="bg-[#1A1A1A] rounded-xl p-8 flex flex-col justify-between text-center min-h-[300px]">
-              <p className="text-gray-200 text-lg leading-relaxed font-medium">
-                "Being a Caveman has helped me evolve and step into the best
-                version of myself."
-              </p>
-              <div>
-                <div className="w-full h-px bg-white/10 my-6"></div>
-                <h4 className="font-bold text-white mb-1">Sadiq Folarin</h4>
-                <p className="text-sm text-gray-500">Digital Creator</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-[#111111] text-white py-16 md:py-24 px-6 md:px-8 text-center border-t border-gray-900">
-        <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tighter uppercase">
-          The work begins now
-        </h2>
-        <p className="text-gray-400 mb-8 font-medium text-base md:text-lg">
-          Discipline is not punishment. It is freedom. Step into The Cave.
-        </p>
-        <a
-          href="https://wa.link/chewxp"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="bg-[#EBCB4B] text-black font-bold py-3 px-12 rounded-sm uppercase cursor-pointer hover:opacity-80 transition-all">
-            Begin
-          </button>
-        </a>
-      </div>
+      <CTA
+        title="The path awaits your first step"
+        desc="Explore the Pathways and discover where you belong in this journey"
+        btnText="Join"
+      />
     </section>
   );
 };
 
-export default Cave;
+export default Pathway;

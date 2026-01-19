@@ -62,4 +62,30 @@ export const builders = [
       " By her third year, she had published a book on engineering growth, downloaded by **150+ students**, and she has built projects such as a **battery-powered neonatal heating blanket** designed for low-cost, off-grid hospital use.",
     ],
   },
+  {
+    id: 7,
+    name: "Olúwájùmílo Cecilia (TheGlobalCeci)",
+    role: ["Featured on TechCabal"],
+    metric: "5000+",
+    metricLabel: "people empowered",
+    image: "/theglobalceci-img.jpg",
+    description: [
+      "Olúwájùmílo Cecilia (TheGlobalCeci) is a filmmaker, social entrepreneur, and community architect using digital storytelling to help African Gen Z unlearn survival scripts, reclaim purpose, and choose lives beyond obedience and fear.",
+      " As a mentor at The Cave Calls and founder of The Porters Clan, a family of creative and social entrepreneurs committed to becoming who they’re meant to be, she has empowered over 5,000 people to gain clarity, break free from survival mode, and deepen their relationship with God. Her work earned her the Impact Partner of the Year 2025 award at The Cave Calls.",
+      " Through films that explore brokenness and purpose, and digital content that challenges generational conditioning, Olúwájùmílo builds communities where transformation isn’t just possible. It’s inevitable. Her mission is clear. To help a generation rewrite the stories they’ve inherited and step into the ones they were created for.",
+    ],
+  },
+  {
+    id: 7,
+    name: "",
+    role: ["Featured on TechCabal"],
+    metric: "5000+",
+    metricLabel: "people empowered",
+    image: "/theglobalceci-img.jpg",
+    description: [
+      "Olúwájùmílo Cecilia (TheGlobalCeci) is a filmmaker, social entrepreneur, and community architect using digital storytelling to help African Gen Z unlearn survival scripts, reclaim purpose, and choose lives beyond obedience and fear.",
+      " As a mentor at The Cave Calls and founder of The Porters Clan, a family of creative and social entrepreneurs committed to becoming who they’re meant to be, she has empowered over 5,000 people to gain clarity, break free from survival mode, and deepen their relationship with God. Her work earned her the Impact Partner of the Year 2025 award at The Cave Calls.",
+      " Through films that explore brokenness and purpose, and digital content that challenges generational conditioning, Olúwájùmílo builds communities where transformation isn’t just possible. It’s inevitable. Her mission is clear. To help a generation rewrite the stories they’ve inherited and step into the ones they were created for.",
+    ],
+  },
 ];
