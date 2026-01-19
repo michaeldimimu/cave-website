@@ -32,12 +32,12 @@ const Cave = () => {
         />
         <div className="inset-0 absolute bg-[#0A0A0A]/80" />
         <div className="absolute w-full px-4 md:w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 className="font-black mb-6 whitespace-nowrap">
-            <span className={`text-2xl md:text-5xl ${poppins.className}`}>
-              WELCOME TO
+          <h1 className="font-black p-3 mb-6  md:whitespace-nowrap">
+            <span className={`text-3xl md:text-5xl ${poppins.className}`}>
+              WELCOME TO The
             </span>{" "}
             <span
-              className={`text-[#EBCB4B] italic text-4xl md:text-7xl ${inter.className}`}
+              className={`text-[#EBCB4B] italic text-6xl md:text-7xl ${inter.className}`}
             >
               Caveverse
             </span>
@@ -50,7 +50,7 @@ const Cave = () => {
               the visionaries, and the change architects. This is home for those
               who are not here to merely exist, but to shape the world.
             </p>
-            <h2 className="text-2xl md:text-4xl uppercase whitespace-nowrap font-bold">
+            <h2 className="text-2xl text-[#EBCB4B] md:text-4xl uppercase whitespace-nowrap font-bold">
               Home of the 1%
             </h2>
           </div>

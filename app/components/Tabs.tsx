@@ -6,8 +6,8 @@ const Tabs = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
   return (
-    <section>
-      <ul className="flex text-black justify-center gap-5">
+    <section className="px-8">
+      <ul className="flex text-black text-xs text-nowrap md:text-base justify-center gap-5">
         <li
           onClick={() => setActiveTab(0)}
           className={` ${activeTab === 0 ? "underline  underline-offset-4" : ""} cursor-pointer hover:opacity-50 transition-all duration-300 ease-in-out`}

@@ -21,7 +21,7 @@ export default function InstagramLazyEmbed() {
   }, [loadEmbed]);
 
   return (
-    <div className="relative max-w-7xl mx-auto aspect-video rounded-xl overflow-hidden group">
+    <div className="relative w-full max-w-[1440px] mx-auto h-[50vh] md:h-[85vh] overflow-hidden group">
       {!loadEmbed ? (
         <>
           {/* Static Thumbnail */}

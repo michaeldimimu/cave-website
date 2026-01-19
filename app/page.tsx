@@ -195,7 +195,7 @@ const Homepage = () => {
       <div className="bg-[#0A0A0A] text-white py-20 md:py-32 px-6 md:px-8 text-center border-t border-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter">
-            700+ members. 5+ countries. <br /> One standard.
+            700+ members. 10+ countries. <br /> One standard.
           </h2>
           <p className="text-gray-400 mb-12 md:mb-16 text-base md:text-lg">
             What happens when serious people commit to serious work

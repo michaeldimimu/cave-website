@@ -16,7 +16,7 @@ const Page = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold text-black">
-              Writing from the community
+              Writings from the community
             </h2>
             <p className="text-gray-600 text-sm md:text-base">
               Thoughts, lessons, and observations shared by those inside The

@@ -40,7 +40,7 @@ export const builders = [
     id: 4,
     name: "Leader Bill",
     role: ["Founder, Global Introvert Circle", "Host, TedX Unilag, 2024"],
-    metric: "11K+",
+    metric: "11+",
     metricLabel: "Public speaking events",
     image: "/leaderbill-2-img.png",
     description: [

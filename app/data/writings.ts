@@ -22,7 +22,7 @@ const writings = [
     url: "https://open.substack.com/pub/olaoluwawhitefire/p/the-multiplication-of-stupidity-in?utm_source=share&utm_medium=android&r=2ly6d7",
     excerpt: "",
     author: "WhiteFire",
-    role: "Community Manager",
+    role: "Head of Marketing & Distribution",
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ const writings = [
     url: "https://open.substack.com/pub/mindofanoddball/p/on-the-man-made-marvel-that-is-the?utm_source=share&utm_medium=android&r=2ly6d7",
     excerpt: "",
     author: "Tireni",
-    role: "Community Manager",
+    role: "Head of Creative Media",
   },
   {
     id: 5,

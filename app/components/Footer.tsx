@@ -16,7 +16,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between w-full gap-10 md:gap-6">
+        <div className="flex flex-col md:flex-row justify-around w-full gap-10 md:gap-6">
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-[#EFC738]">Explore</h3>
             <ul className="flex text-sm flex-col gap-3 text-gray-300">
@@ -55,36 +55,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="font-semibold text-[#EFC738]">Resources</h3>
-            <ul className="flex text-sm flex-col gap-3 text-gray-300">
-              <li>
-                <Link
-                  className="hover:text-[#EFC738] transition-colors"
-                  href=""
-                >
-                  Posts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-[#EFC738] transition-colors"
-                  href=""
-                >
-                  Proofs
-                </Link>
-              </li>
 
-              <li>
-                <Link
-                  className="hover:text-[#EFC738] transition-colors"
-                  href=""
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-[#EFC738]">Connect</h3>
             <ul className="flex text-sm flex-col gap-3 text-gray-300">

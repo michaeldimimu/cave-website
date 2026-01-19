@@ -18,7 +18,9 @@ const TabsCard = ({
   header: string;
 }) => {
   return (
-    <section className={`rounded-xl mb-5 mx-10 mt-12 bg-[#E7D32A]`}>
+    <section
+      className={`rounded-xl w-full mx-auto mb-5 md:mx-10 mt-12 bg-[#E7D32A]`}
+    >
       <span className={`flex gap-4 items-center`}>
         <p className="font-bold">{number}</p>
         <p>{title}</p>
@@ -32,7 +34,7 @@ const TabsCard = ({
           </h2>
           <p className="text-black">{subtitle}</p>
           <button
-            className={`bg-[#EFC738] border border-black w-fit hover:opacity-80 transition-all duration-300 ease-in-out cursor-pointer text-black px-8 md:px-16 rounded-lg py-2 mt-2 md:mt-4`}
+            className={`bg-[#EFC738] border border-black w-fit hover:opacity-80 transition-all duration-300 ease-in-out cursor-pointer mx-auto md:mx-0 text-black px-8 md:px-16 rounded-lg py-2 mt-2 md:mt-4`}
           >
             Begin
           </button>

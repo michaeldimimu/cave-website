@@ -3,9 +3,12 @@ const paths = [
     number: "01",
     title: "Begin",
     header: "Discovery",
-    description: "Where intention meets action",
-    subtitle:
+    description: "Where confusion meets clarity",
+    subtitle: [
       "The first stage demands clarity. You arrive with questions and leave with direction.",
+      "In 7 days, BEGIN helps you: **Spot your patterns**, **Identify friction in clarity, focus, and discipline**, **Name the real problem without shame**",
+      "Stop collecting advice. Start building accuracy.",
+    ],
     image: "/begin-img.jpg",
     order: 1,
   },
@@ -14,8 +17,10 @@ const paths = [
     title: "Onboarding",
     header: "Foundation",
     description: "Where intention meets action",
-    subtitle:
-      "The first stage demands clarity. You arrive with questions and leave with direction.",
+    subtitle: [
+      "This is where you stop consuming externally and begin accurate self-assessment.",
+      "Here you will: **Clarify your current skill level**, **Assess your discipline capacity**, **Rework the belief systems holding you back**",
+    ],
     image: "/path-img.jpg",
     order: 2,
   },
@@ -23,19 +28,20 @@ const paths = [
     number: "03",
     title: "Lounge",
     header: "Community",
-    description: "Where intention meets action",
-    subtitle:
-      "The first stage demands clarity. You arrive with questions and leave with direction.",
+    description: "Finding your tribe",
+    subtitle: [
+      "Here you rest and connect. The Lounge is where solitary seekers become part of something larger.",
+    ],
     image: "/lounge-img.jpg",
     order: 1,
   },
   {
     number: "04",
-    title: "Begin",
+    title: "Bridge",
     header: "Transition",
-    description: "Where intention meets action",
+    description: "Crossing into deeper work",
     subtitle:
-      "The first stage demands clarity. You arrive with questions and leave with direction.",
+      "The Bridge tests your commitment. What you learned before becomes the foundation for what comes next.",
     image: "/bridge-img.jpg",
     order: 2,
   },
@@ -43,9 +49,9 @@ const paths = [
     number: "05",
     title: "Lighthouse",
     header: "Clarity",
-    description: "Where intention meets action",
+    description: "Seeing the path forward",
     subtitle:
-      "The first stage demands clarity. You arrive with questions and leave with direction.",
+      "Vision crystallizes here. The Lighthouse illuminates what was once hidden and guides your next moves.",
     image: "/lighthouse-img.jpg",
     order: 1,
   },

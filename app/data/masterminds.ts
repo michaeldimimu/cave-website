@@ -5,12 +5,12 @@ const masterminds = [
     image: "/mezie-img.jpg",
   },
   {
-    name: 'Priscillia "KuKu" Kuti-Ukeagbu',
+    name: 'Priscilia "KuKu" Kuti-Ukaegbu',
     role: "Vice Principal, The Cave",
     image: "/kuti-img.jpg",
   },
   {
-    name: "Angel Fluorish",
+    name: "Angel Flourish",
     role: "Dean, Academics",
     image: "/angel-img.jpg",
   },
@@ -25,7 +25,7 @@ const masterminds = [
     image: "/ayomide-img.jpg",
   },
   {
-    name: "Raphael Idemotuk",
+    name: "Raphael Idemetuk",
     role: "Dean, Administration",
     image: "/raphael-img.jpg",
   },
