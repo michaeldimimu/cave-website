@@ -88,7 +88,7 @@ const Homepage = () => {
             <h2 className="text-3xl md:text-6xl font-black mb-4 tracking-tighter">
               Go from confused to <br />
               <span className="text-[#EBCB4B] drop-shadow-[0_0_15px_rgba(235,203,75,0.5)]">
-                master builder
+                Master Builder
               </span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg">

@@ -14,7 +14,7 @@ const heroSlides = [
   {
     id: 3,
     name: "Olaoluwa WhiteFire",
-    subtitle: "Host,KFC UNILAG 2.0's first Pre-event",
+    subtitle: "TedxUnilag Licensee",
     image: "/whitefire-img.jpg",
   },
   {
