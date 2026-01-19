@@ -19,7 +19,7 @@ const PathCard = ({
 }) => {
   return (
     <section
-      className={`${order === 2 ? "bg-[#404040] text-white" : "bg-white text-black"} rounded-xl p-8 mx-4 mt-12`}
+      className={`${order === 2 ? "bg-black text-white" : "bg-white text-black"} rounded-xl p-8 mx-4 mt-12`}
     >
       <span
         className={`flex gap-4 items-center ${order === 2 && "text-[#EFC738]"}`}

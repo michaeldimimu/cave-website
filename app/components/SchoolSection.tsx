@@ -1,3 +1,5 @@
+import Testimonials from "./Testimonials";
+
 const SchoolSection = ({
   theme,
   title,
@@ -13,7 +15,7 @@ const SchoolSection = ({
 
   return (
     <section
-      className={`py-32 px-6 ${
+      className={`py-16 px-6 ${
         isDark ? "bg-[#0A0A0A] text-white" : "bg-[#F8F8F8] text-black"
       }`}
     >
@@ -85,7 +87,7 @@ const SchoolSection = ({
             </div>
 
             <button
-              className={`mt-4 w-full md:w-max py-4 px-24 font-bold uppercase transition-all ${
+              className={`mt-4 w-full md:w-max rounded-lg py-4 px-24 font-bold uppercase transition-all ${
                 isDark
                   ? "bg-[#EBCB4B] text-black hover:bg-yellow-500"
                   : "bg-[#EBCB4B] text-black hover:bg-yellow-500 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
@@ -107,6 +109,7 @@ const SchoolSection = ({
           </div>
         </div>
       </div>
+      {title === "The Selling School" && <Testimonials />}
     </section>
   );
 };

@@ -3,6 +3,9 @@ import React from "react";
 import heroSlides from "../data/hero-slides";
 import writings from "../data/writings";
 import WritingCard from "@/app/components/WritingCard";
+import BuildersSection from "../components/BuildersSection";
+import VoicesSection from "../components/VoicesSection";
+import CTA from "../components/CTA";
 
 const Page = () => {
   return (
@@ -21,13 +24,29 @@ const Page = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {writings.map((writing) => (
-              <WritingCard key={writing.id} {...writing} />
+              <WritingCard
+                key={writing.id}
+                id={writing.id}
+                title={writing.title}
+                excerpt={writing.excerpt}
+                author={writing.author}
+                role={writing.role}
+                substackUrl={writing.url}
+              />
             ))}
           </div>
         </div>
       </section>
+
+      <BuildersSection />
+      <VoicesSection />
+      <CTA
+        title="Ready to join the 1%?"
+        desc="You will take your growth seriously without making it everyone else's problem."
+        btnText="Begin"
+      />
     </main>
   );
 };

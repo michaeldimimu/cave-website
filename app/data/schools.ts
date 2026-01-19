@@ -19,29 +19,6 @@ const schools: School[] = [
     image: "/selling-school-img.jpg",
     cta: "Begin",
     reverse: false,
-    testimonials: [
-      {
-        name: "Dubem, the Great",
-        role: "Founder, Orthodox Gadgets",
-        body: "He made 100 million naira in revenue by 2025 just by following rules and principles taught in the selling school.",
-        highlight: true,
-      },
-      {
-        name: "Dubem, the Great",
-        role: "Founder, Orthodox Gadgets",
-        body: "He made 100 million naira in revenue by 2025 just by following rules and principles taught in the selling school.",
-      },
-      {
-        name: "Dubem, the Great",
-        role: "Founder, Orthodox Gadgets",
-        body: "He made 100 million naira in revenue by 2025 just by following rules and principles taught in the selling school.",
-      },
-      {
-        name: "Dubem, the Great",
-        role: "Founder, Orthodox Gadgets",
-        body: "He made 100 million naira in revenue by 2025 just by following rules and principles taught in the selling school.",
-      },
-    ],
   },
   {
     id: "healing",

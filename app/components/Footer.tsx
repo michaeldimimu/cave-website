@@ -5,81 +5,111 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-black border-t border-[#EFC738] text-white px-[80px] z-50 py-16">
-      <div className="flex gap-8">
-        <div className="w-18 h-18">
+    <footer className="bg-black border-t border-[#EFC738] text-white px-6 md:px-[80px] z-50 py-16">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+        <div className="w-20 h-20 relative shrink-0">
           <Image
             src="/cave-logo.png"
             alt="The Cave Logo"
-            width={100}
-            height={100}
+            fill
+            className="object-contain"
           />
         </div>
 
-        <div className="flex justify-around w-full gap-6">
-          <div className="flex flex-col gap-2">
-            <h3 className="font-semibold">Explore</h3>
-            <ul className="flex text-sm  flex-col gap-2">
+        <div className="flex flex-col md:flex-row justify-between w-full gap-10 md:gap-6">
+          <div className="flex flex-col gap-4">
+            <h3 className="font-semibold text-[#EFC738]">Explore</h3>
+            <ul className="flex text-sm flex-col gap-3 text-gray-300">
               <li>
-                <Link className="hover:text-[#EFC738]" href="/the-cave">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/cave"
+                >
                   The Cave
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#EFC738]" href="/pathway">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/path"
+                >
                   The Path
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#EFC738]" href="/school">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/schools"
+                >
                   The Schools
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#EFC738]" href="/infrastructure">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/infrastructure"
+                >
                   The Infrastructure
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#EFC738]" href="/archive">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/archive"
+                >
                   The Archive
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="font-semibold">Resources</h3>
-            <ul className="flex text-sm  flex-col gap-2">
+          <div className="flex flex-col gap-4">
+            <h3 className="font-semibold text-[#EFC738]">Resources</h3>
+            <ul className="flex text-sm flex-col gap-3 text-gray-300">
               <li>
-                <Link className="hover:text-[#EFC738]" href="/cave-posts">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/cave-posts"
+                >
                   Cave Posts
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#EFC738]" href="/proofs">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/proofs"
+                >
                   Proofs
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#EFC738]" href="/cave-labs">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/cave-labs"
+                >
                   Cave Labs
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#EFC738]" href="/cave-press">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/cave-press"
+                >
                   Cave Press
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#EFC738]" href="/contact">
+                <Link
+                  className="hover:text-[#EFC738] transition-colors"
+                  href="/contact"
+                >
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="font-semibold">Connect</h3>
-            <ul className="flex text-sm  flex-col gap-2">
+          <div className="flex flex-col gap-4">
+            <h3 className="font-semibold text-[#EFC738]">Connect</h3>
+            <ul className="flex text-sm flex-col gap-3 text-gray-300">
               <li>
                 <Link
                   href="https://www.instagram.com/thecaveofficial/"
@@ -100,20 +130,27 @@ const Footer = () => {
 
               <li>
                 <Link
-                  className="hover:text-red-500"
+                  className="group flex items-center gap-2 transition-all duration-300"
                   href="https://www.youtube.com/@thecaveofficial"
                 >
-                  <span className="flex items-center gap-2">
-                    <span className="hover:text-red-500 cursor-pointer transition-all duration-300 ease-in-out">
-                      <FaYoutube size={20} />
-                    </span>
-                    <span>YouTube</span>
+                  <span className="flex items-center justify-center w-6 h-6">
+                    <FaYoutube
+                      size={20}
+                      className="transition-colors duration-300 group-hover:text-red-600"
+                    />
+                  </span>
+                  <span className="group-hover:text-red-600 transition-colors duration-300">
+                    YouTube
                   </span>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="mt-16 pt-8 border-t border-white/10 text-center text-sm text-gray-500">
+        <p>© Copyright 2026 The Cave. All rights reserved.</p>
       </div>
     </footer>
   );

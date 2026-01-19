@@ -1,0 +1,65 @@
+export const builders = [
+  {
+    id: 1,
+    name: "Jescil Richard",
+    role: ["Host, Alchemy Con 2025."],
+    metric: "2M+",
+    metricLabel: "Organic Views",
+    image: "/jescil-img.jpg",
+    description: [
+      "Jescil Richard sits at the intersection of storytelling, narrative, community, and persuasion.",
+      "She has worked alongside notable creators and founders including **Salem King** and **Pelumi Nubi** scaling their stories without diluting their narrative or branding.",
+      "Her **personal newsletter** is read across **31+ countries**, and in 90 days, she has driven **2M+ organic views** for clients and herself.",
+    ],
+  },
+  {
+    id: 2,
+    name: "Winn Supreme Arinze",
+    role: ["Founder of MOOOVES."],
+    metric: "100+",
+    metricLabel: "Articles Written",
+    image: "/winn-img.jpg",
+    description: [
+      "Winn Supreme is building **MOOVES**, a strategy game and economic platform desgned for leverage through play, community, and competition",
+      "His work centers on collaborative systems that help people fund ideas independently, backed by **100+** published articles on Substack with ideas featured on **BellaNaija.**",
+    ],
+  },
+  {
+    id: 3,
+    name: "Dubem The Great",
+    role: ["Founder of Orthodox Gadgets", "Selling School Graduate"],
+    metric: "#100M",
+    metricLabel: "In Revenue",
+    image: "/dubem-img.jpg",
+    description: [
+      "Chidubem Uchenna founded Orthodox Gadgets and built it to **₦100,000,000+ in revenue in 12 months**, serving customers across Nigeria and beyond through transparent selling and problem-first retail.",
+      "Beyond business, he's committed to youth education and skill development. He hosted **KFC UNILAG 2.0 (2025)**, a student financial education and business network bridging classroom theory with real-world expertise.",
+    ],
+  },
+  {
+    id: 4,
+    name: "Leader Bill",
+    role: ["Founder, Global Introvert Circle", "Host, TedX Unilag, 2024"],
+    metric: "11K+",
+    metricLabel: "Public speaking events",
+    image: "/leaderbill-2-img.png",
+    description: [
+      "Leader BILL is the founder of **Global Introvert Circle**, helping young introverts develop leadership and communication skills.",
+
+      "She revived **TEDx UNILAG** as an official licensee after a decade of inactivity and has spoken at **11+ events**, including **UPE Initiative, KFC UNILAG, and Alchemy Con.**",
+      "She also supports access to quality education through the **Educate A Child Project**.",
+    ],
+  },
+  {
+    id: 5,
+    name: "Motunrayo Sanyaolu",
+    role: ["Featured on TechCabal"],
+    metric: "150+",
+    metricLabel: "books download",
+    image: "/motunrayo-2-img.jpg",
+    description: [
+      "Motunrayo Sanyaolu is a electrical engineering student and inventor recognised as the **first-ever recipient of the Engineering Spirit Award** in 2024. Her work focuses on assistive innovation and external support devices that expand mobility and independence.",
+      " By her third year, she had published a book on engineering growth, downloaded by **150+ students**, and she has built projects such as a **battery-powered neonatal heating blanket** designed for low-cost, off-grid hospital use.",
+    ],
+  },
+];
