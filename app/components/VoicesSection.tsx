@@ -48,7 +48,7 @@ const VoicesSection = () => {
             </button>
           </div>
 
-          <div className="w-full h-[800px] flex mx-auto aspect-video bg-[#1A1A1A] rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
+          <div className="w-full h-[800px] md:h-0  flex mx-auto bg-[#1A1A1A] rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
             {isPlaying ? (
               <iframe
                 src={`https://www.youtube.com/embed/${currentVoice.videoId}?autoplay=1`}

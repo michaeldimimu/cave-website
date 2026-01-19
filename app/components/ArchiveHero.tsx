@@ -5,22 +5,62 @@ import Image from "next/image";
 
 const ArchiveHero = ({ slides, interval = 5000 }: any) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % slides.length);
+      handleNext();
     }, interval);
 
     return () => clearInterval(timer);
-  }, [slides.length, interval]);
+  }, [activeIndex, slides.length, interval]);
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % slides.length);
+  };
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) handleNext();
+    if (isRightSwipe) handlePrev();
+  };
 
   return (
-    <section className="relative w-full h-[55vh] md:h-[90vh] overflow-hidden">
+    <section
+      className="relative w-full h-[55vh] md:h-[90vh] overflow-hidden touch-pan-y"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       {slides.map((slide: any, index: number) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-            index === activeIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+          className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+            index === activeIndex
+              ? "opacity-100 z-10 translate-x-0"
+              : index < activeIndex
+                ? "opacity-0 z-0 -translate-x-full"
+                : "opacity-0 z-0 translate-x-full"
           }`}
         >
           <Image
@@ -50,11 +90,15 @@ const ArchiveHero = ({ slides, interval = 5000 }: any) => {
       {/* Indicators */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {slides.map((_: any, i: number) => (
-          <span
+          <button
             key={i}
-            className={`w-2.5 h-2.5 rounded-full transition-colors ${
-              i === activeIndex ? "bg-[#EBCB4B]" : "bg-white/30"
+            onClick={() => setActiveIndex(i)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              i === activeIndex
+                ? "bg-[#EBCB4B] w-8"
+                : "bg-white/30 hover:bg-white/50"
             }`}
+            aria-label={`Go to slide ${i + 1}`}
           />
         ))}
       </div>
