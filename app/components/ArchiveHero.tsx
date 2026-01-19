@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const ArchiveHero = ({ slides, interval = 5000 }: any) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isMouseDown, setIsMouseDown] = useState(false);
 
   const minSwipeDistance = 50;
 
@@ -45,12 +47,37 @@ const ArchiveHero = ({ slides, interval = 5000 }: any) => {
     if (isRightSwipe) handlePrev();
   };
 
+  const onMouseDown = (e: React.MouseEvent) => {
+    setIsMouseDown(true);
+    setTouchEnd(null);
+    setTouchStart(e.clientX);
+  };
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isMouseDown) return;
+    setTouchEnd(e.clientX);
+  };
+
+  const onMouseUp = () => {
+    if (!isMouseDown) return;
+    setIsMouseDown(false);
+    onTouchEnd(); // Reuse swipe logic
+  };
+
+  const onMouseLeave = () => {
+    setIsMouseDown(false);
+  };
+
   return (
     <section
-      className="relative w-full h-[55vh] md:h-[90vh] overflow-hidden touch-pan-y"
+      className={`relative w-full h-[55vh] md:h-[90vh] overflow-hidden touch-pan-y ${isMouseDown ? "cursor-grabbing" : "cursor-grab"}`}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={onMouseUp}
+      onMouseLeave={onMouseLeave}
     >
       {slides.map((slide: any, index: number) => (
         <div
@@ -102,6 +129,20 @@ const ArchiveHero = ({ slides, interval = 5000 }: any) => {
           />
         ))}
       </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={handlePrev}
+        className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/20 hover:bg-black/40 text-white items-center justify-center z-30 transition-all cursor-pointer"
+      >
+        <FaChevronLeft size={24} />
+      </button>
+      <button
+        onClick={handleNext}
+        className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/20 hover:bg-black/40 text-white items-center justify-center z-30 transition-all cursor-pointer"
+      >
+        <FaChevronRight size={24} />
+      </button>
     </section>
   );
 };
