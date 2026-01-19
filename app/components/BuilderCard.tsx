@@ -37,11 +37,11 @@ const BuilderCard: React.FC<BuilderProps> = ({
           <h3 className="text-2xl md:text-4xl font-black text-black mb-2">
             {name}
           </h3>
-          <p className="text-gray-600 text-sm md:text-base font-medium">
+          <div className="text-gray-600 text-sm md:text-base font-medium">
             {role.map((role) => (
-              <span key={role}>{role}</span>
+              <p key={role}>{role}</p>
             ))}
-          </p>
+          </div>
         </div>
         <div className="text-left md:text-right">
           <h4 className="text-5xl md:text-7xl font-medium tracking-tighter text-black">

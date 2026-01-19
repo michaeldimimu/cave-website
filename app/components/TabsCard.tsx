@@ -19,33 +19,41 @@ const TabsCard = ({
 }) => {
   return (
     <section
-      className={`rounded-xl w-full mx-auto mb-5 md:mx-10 mt-12 bg-[#E7D32A]`}
+      className={`rounded-2xl w-full mx-auto mb-10 mt-12 overflow-hidden shadow-lg ${bgColor}`}
     >
-      <span className={`flex gap-4 items-center`}>
-        <p className="font-bold">{number}</p>
-        <p>{title}</p>
-      </span>
+      <div className={`flex flex-col-reverse md:flex-row items-stretch`}>
+        <div className="flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center gap-4 text-center md:text-left">
+          <div className="flex gap-4 items-center mb-2 justify-center md:justify-start">
+            <span className="font-mono text-xs opacity-60">{number}</span>
+          </div>
 
-      <div className={`flex flex-col md:flex-row gap-6 items-center`}>
-        <div className="flex-1 p-10 flex flex-col gap-2 text-center md:text-left">
-          <p className="font-semibold text-black">{header}</p>
-          <h2 className="text-3xl text-black md:text-5xl font-bold">
-            {description}
-          </h2>
-          <p className="text-black">{subtitle}</p>
-          <button
-            className={`bg-[#EFC738] border border-black w-fit hover:opacity-80 transition-all duration-300 ease-in-out cursor-pointer mx-auto md:mx-0 text-black px-8 md:px-16 rounded-lg py-2 mt-2 md:mt-4`}
-          >
-            Begin
-          </button>
+          <div className="space-y-2">
+            <p className="font-bold text-black/60 uppercase text-xs tracking-widest">
+              {header}
+            </p>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-black leading-tight">
+              {description}
+            </h2>
+          </div>
+
+          <p className="text-black/80 font-medium leading-relaxed max-w-lg mx-auto md:mx-0">
+            {subtitle}
+          </p>
+
+          <div className="mt-4">
+            <button className="bg-black hover:bg-black/80 text-white font-bold w-full md:w-fit px-10 py-4 rounded-full transition-all duration-300 uppercase tracking-tighter text-xs">
+              Begin Journey
+            </button>
+          </div>
         </div>
 
-        <div className="flex-1 relative w-full h-64 md:h-96 overflow-hidden shadow-lg">
+        <div className="flex-1 relative w-full h-[300px] md:h-auto min-h-[300px] overflow-hidden">
           <Image
             src={image}
-            alt="Pathway Image"
+            alt={description}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-700 hover:scale-105"
+            priority
           />
         </div>
       </div>

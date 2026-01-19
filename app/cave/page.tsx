@@ -169,7 +169,7 @@ const Cave = () => {
             <h2
               className={`text-3xl md:text-6xl font-bold tracking-tight text-[#EBCB4B] leading-[1.1] max-w-2xl ${poppins.className}`}
             >
-              Built on first principles, not best practices.
+              Built on First Principles, not best practices.
             </h2>
             <p className="text-gray-300 text-sm md:text-lg max-w-md font-medium text-left md:text-right leading-relaxed">
               Every element of The Cave derives from fundamental truths about
@@ -195,7 +195,7 @@ const Cave = () => {
           <h2
             className={`text-3xl md:text-7xl font-bold text-[#EBCB4B] mb-12 md:mb-20 ${poppins.className}`}
           >
-            Meet the Master minds
+            Meet the Masterminds
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

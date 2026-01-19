@@ -15,19 +15,20 @@ const masterminds = [
     image: "/angel-img.jpg",
   },
   {
-    name: "Victoria",
-    role: "Cave Press Lead",
-    image: "/victoria-img.jpg",
+    name: "Raphael Idemetuk",
+    role: "Dean, Administration",
+    image: "/raphael-img.jpg",
   },
+
   {
     name: "Ayomide Himothy",
     role: "COO & CTO",
     image: "/ayomide-img.jpg",
   },
   {
-    name: "Raphael Idemetuk",
-    role: "Dean, Administration",
-    image: "/raphael-img.jpg",
+    name: "Victoria",
+    role: "Cave Press Lead",
+    image: "/victoria-img.jpg",
   },
 ];
 

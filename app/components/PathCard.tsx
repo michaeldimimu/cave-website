@@ -77,7 +77,17 @@ const PathCard = ({
             className="mt-4"
           >
             <button className="bg-[#EFC738] w-full md:w-fit font-bold hover:opacity-80 transition-all duration-300 ease-in-out cursor-pointer text-black px-12 rounded-lg py-4">
-              Begin Journey
+              {number === "01"
+                ? "Begin"
+                : number === "02"
+                  ? "Start"
+                  : number === "03"
+                    ? "Ready"
+                    : number === "04"
+                      ? "You game"
+                      : number === "05"
+                        ? "Enter"
+                        : ""}
             </button>
           </a>
         </div>

@@ -38,7 +38,7 @@ const writings = [
     url: "https://open.substack.com/pub/prosperr/p/self-invention-is-power?utm_source=share&utm_medium=android&r=1v4jf4",
     excerpt: "",
     author: "Prosper",
-    role: "Community Manager",
+    role: "Bridge Mentor",
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const writings = [
     url: "https://open.substack.com/pub/thetablewithkarmy/p/spiralling?utm_source=direct&utm_campaign=post-expanded-share&utm_medium=web",
     excerpt: "",
     author: "Karmy",
-    role: "Community Manager",
+    role: "Bridge Mentor",
   },
 ];
 
