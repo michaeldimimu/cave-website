@@ -44,7 +44,7 @@ const HomePage = () => {
             </span>
           </h1>
           <div
-            className={`flex flex-col md:flex-row w-full gap-4 md:gap-3 items-center ${poppins.className}`}
+            className={`flex flex-col md:justify-center md:flex-row w-full gap-4 md:gap-3 items-center ${poppins.className}`}
           >
             <p className="text-xs md:text-sm tracking-wide leading-relaxed text-center md:text-left max-w-md mx-auto md:mx-0">
               A training ground, a culture, a community to the impact driven,
