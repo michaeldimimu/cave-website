@@ -5,7 +5,7 @@ export const builders = [
     role: ["Host, Alchemy Con 2025."],
     metric: "2M+",
     metricLabel: "Organic Views",
-    image: "/jescil-img.jpg",
+    image: "/jescil-img.png",
     description: [
       "Jescil Richard sits at the intersection of storytelling, narrative, community, and persuasion.",
       "She has worked alongside notable creators and founders including **Salem King** and **Pelumi Nubi** scaling their stories without diluting their narrative or branding.",
