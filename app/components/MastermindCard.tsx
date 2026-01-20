@@ -17,7 +17,7 @@ const MastermindCard: React.FC<MastermindCardProps> = ({
       <div className="relative flex-1 w-full bg-neutral-900">
         <Image src={image} alt={name} fill className="object-cover" />
       </div>
-      <div className="bg-linear-to-b from-[#FFFDF5] to-[#EBCB4B] py-6 px-4 text-center border-t border-[#EBCB4B]/20">
+      <div className="bg-linear-to-b from-[#f3e3a5] to-[#EBCB4B] py-6 px-4 text-center border-t border-[#EBCB4B]/20">
         <h3 className="text-xl md:text-2xl font-black text-black mb-2 leading-tight">
           {name}
         </h3>

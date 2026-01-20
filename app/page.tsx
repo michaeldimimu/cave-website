@@ -12,6 +12,7 @@ import CTA from "./components/CTA";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
+  style: ["normal", "italic"],
 });
 
 const poppins = Poppins({
@@ -21,7 +22,7 @@ const poppins = Poppins({
 
 const HomePage = () => {
   return (
-    <section className="max-w-7xl mx-auto pt-20 text-white relative overflow-hidden">
+    <section className="mx-auto pt-20 text-white relative overflow-hidden">
       <div className="w-full h-[90vh] relative">
         <Image
           src="/the-cave-hero.jpg"
@@ -30,14 +31,14 @@ const HomePage = () => {
           priority
           className="object-cover"
         />
-        <div className="inset-0 absolute bg-[#0A0A0A]/80" />
+        <div className="inset-0 absolute bg-[#000000]/90" />
         <div className="absolute w-full px-4 md:w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 className="font-black p-3 mb-6  md:whitespace-nowrap">
-            <span className={`text-3xl md:text-5xl ${poppins.className}`}>
-              WELCOME TO The
+          <h1 className="font-bold p-3 mb-6  md:whitespace-nowrap">
+            <span className={`text-3xl lg:text-6xl ${poppins.className}`}>
+              WELCOME TO THE
             </span>{" "}
             <span
-              className={`text-[#EBCB4B] italic text-6xl md:text-7xl ${inter.className}`}
+              className={`text-[#EBCB4B] italic text-5xl lg:text-8xl ${inter.className}`}
             >
               Caveverse
             </span>
