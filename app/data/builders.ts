@@ -72,7 +72,18 @@ export const builders = [
     description: [
       "Olúwájùmílo Cecilia (TheGlobalCeci) is a filmmaker, social entrepreneur, and community architect using digital storytelling to help African Gen Z unlearn survival scripts, reclaim purpose, and choose lives beyond obedience and fear.",
       " As a mentor at The Cave Calls and founder of The Porters Clan, a family of creative and social entrepreneurs committed to becoming who they’re meant to be, she has empowered over 5,000 people to gain clarity, break free from survival mode, and deepen their relationship with God. Her work earned her the Impact Partner of the Year 2025 award at The Cave Calls.",
-      " Through films that explore brokenness and purpose, and digital content that challenges generational conditioning, Olúwájùmílo builds communities where transformation isn’t just possible. It’s inevitable. Her mission is clear. To help a generation rewrite the stories they’ve inherited and step into the ones they were created for.",
+    ],
+  },
+  {
+    id: 7,
+    name: "Rico Maz",
+    role: ["Song Writer", "Record Producer"],
+    metric: "500k",
+    metricLabel: "Streams",
+    image: "/rico-img.jpeg",
+    description: [
+      "Rico Maz (Ricky Quarantino) is a Nigerian artist, songwriter, and record producer whose innovative fusion of R&B, Hip-Hop, Afrobeat, and EmoRap creates captivating, genre-defying music designed to resonate deeply and repeatedly with listeners worldwide.",
+      "Through projects like Pop Fiction and Q, and driven by a passion for collaboration and sonic experimentation, he crafts layered, emotionally rich soundscapes that reflect his evolving artistry—always poised to reveal the next illuminating chapter of his work.",
     ],
   },
 ];
