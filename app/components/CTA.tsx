@@ -33,7 +33,7 @@ const CTA = ({
           <p className="text-center max-w-prose">{desc}</p>
           <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
             <a
-              href="https://wa.link/chewxp"
+              href="https://wa.link/4jae4p"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full md:w-auto"
@@ -44,7 +44,7 @@ const CTA = ({
             </a>
             {btnText2 && (
               <a
-                href="https://wa.link/chewxp"
+                href="https://wa.link/4jae4p"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"

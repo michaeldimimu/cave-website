@@ -71,7 +71,7 @@ const PathCard = ({
             )}
           </div>
           <a
-            href="https://wa.link/chewxp"
+            href="https://wa.link/4jae4p"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4"

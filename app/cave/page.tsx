@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Homepage = () => {
@@ -15,15 +16,11 @@ const Homepage = () => {
             scattered ambition. We build serious practitioners through
             structured paths, intellectual rigor, and real outcomes.
           </p>
-          <a
-            href="https://wa.link/chewxp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="https://wa.link/4jae4p">
             <button className="bg-[#EBCB4B] text-black font-bold py-3 md:py-4 px-8 md:px-12 rounded-sm cursor-pointer hover:opacity-80 uppercase transition-all text-sm md:text-base">
               Begin
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -54,7 +51,7 @@ const Homepage = () => {
               regret. IF THAT'S YOU,
             </p>
             <a
-              href="https://wa.link/chewxp"
+              href="https://wa.link/4jae4p"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -133,7 +130,7 @@ const Homepage = () => {
               />
 
               <a
-                href="https://wa.link/chewxp"
+                href="https://wa.link/4jae4p"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full md:w-auto"
@@ -181,7 +178,7 @@ const Homepage = () => {
             </div>
           </div>
           <a
-            href="https://wa.link/chewxp"
+            href="https://wa.link/4jae4p"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -249,7 +246,7 @@ const Homepage = () => {
           Discipline is not punishment. It is freedom. Step into The Cave.
         </p>
         <a
-          href="https://wa.link/chewxp"
+          href="https://wa.link/4jae4p"
           target="_blank"
           rel="noopener noreferrer"
         >

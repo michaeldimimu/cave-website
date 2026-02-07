@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const TabsCard = ({
   number,
@@ -42,7 +43,7 @@ const TabsCard = ({
 
           <div className="mt-4">
             <button className="bg-black hover:bg-black/80 text-white font-bold w-full md:w-fit px-10 py-4 rounded-full transition-all duration-300 uppercase tracking-tighter text-xs">
-              Begin Journey
+              <Link href="https://wa.link/4jae4p">Begin Journey</Link>
             </button>
           </div>
         </div>

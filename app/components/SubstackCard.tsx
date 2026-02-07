@@ -66,7 +66,7 @@ export default function SubstackCard({
       } ${className}`}
     >
       {/* Thumbnail with progressive loading */}
-      <div className="relative w-full aspect-[4/3] bg-gray-100 rounded-lg mb-6 overflow-hidden">
+      <div className="relative w-full aspect-4/3 bg-gray-100 rounded-lg mb-6 overflow-hidden">
         {thumbnail && !isLoading && !hasError ? (
           <Image
             src={thumbnail}
@@ -80,7 +80,7 @@ export default function SubstackCard({
             }}
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+          <div className="w-full h-full flex flex-col items-center justify-center bg-linear-to-br from-gray-100 to-gray-200">
             <FaImage className="text-4xl text-gray-400 mb-3 opacity-60" />
             {isLoading ? (
               <div className="flex items-center gap-2">
