@@ -12,6 +12,7 @@ const Header = () => {
 
   const navLinks = [
     { name: "The Cave", href: "/cave" },
+    { name: "Cave Labs", href: "/cave-labs" },
     { name: "The Path", href: "/path" },
     { name: "Schools", href: "/schools" },
     { name: "The Archive", href: "/archive" },
